@@ -1,7 +1,8 @@
 import ExpenseItem from "./ExpenseItem";
+import "./DisplayExpenses.css";
 const DisplayExpenses = (props) => {
   return (
-    <div>
+    <div className="display-expenses">
       <ExpenseItem
         date={props.expenses[0].date}
         title={props.expenses[0].title}
