@@ -6,6 +6,11 @@ function App() {
       title: "Car Insurance",
       amount: 294.67,
     },
+    {
+      date: new Date(2021, 7, 28),
+      title: "House Insurance",
+      amount: 710.2,
+    },
   ];
   return (
     <div>
