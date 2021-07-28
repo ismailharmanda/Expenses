@@ -1,14 +1,15 @@
 import ExpenseItem from "./ExpenseItem";
+import Card from "./Card";
 import "./DisplayExpenses.css";
 const DisplayExpenses = (props) => {
   return (
-    <div className="display-expenses">
+    <Card className="display-expenses">
       <ExpenseItem
         date={props.expenses[0].date}
         title={props.expenses[0].title}
         amount={props.expenses[0].amount}
       />
-    </div>
+    </Card>
   );
 };
 export default DisplayExpenses;
