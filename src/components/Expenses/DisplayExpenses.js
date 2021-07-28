@@ -9,6 +9,11 @@ const DisplayExpenses = (props) => {
         title={props.expenses[0].title}
         amount={props.expenses[0].amount}
       />
+      <ExpenseItem
+        date={props.expenses[1].date}
+        title={props.expenses[1].title}
+        amount={props.expenses[1].amount}
+      />
     </Card>
   );
 };
