@@ -12,12 +12,12 @@ const DisplayExpenses = (props) => {
     <div>
       <Card className="display-expenses">
         <ExpenseFilter selected={filteredYear} onChange={onChangeHandler} />
-        {props.expenses.map((expense) => (
+        {props.expenses.map((expense, index) => (
           <ExpenseItem
             title={expense.title}
             date={expense.date}
             amount={expense.amount}
-            key={Math.random()}
+            key={index}
           />
         ))}
       </Card>
