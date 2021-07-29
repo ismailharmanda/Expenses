@@ -29,6 +29,10 @@ const ExpenseForm = () => {
   };
   const onFormSubmit = (e) => {
     e.preventDefault();
+    const expenseData = {
+      ...userInput,
+    };
+    console.log(expenseData);
   };
   return (
     <div>
