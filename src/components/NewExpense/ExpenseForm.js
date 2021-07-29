@@ -27,9 +27,12 @@ const ExpenseForm = () => {
       return { ...prevState, enteredDate: e.target.value };
     });
   };
+  const onFormSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <div>
-      <form>
+      <form onSubmit={(e) => onFormSubmit(e)}>
         <div className="new-expense__controls">
           <div className="new-expense__control">
             <label>Title</label>
