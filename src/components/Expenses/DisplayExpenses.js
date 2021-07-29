@@ -17,6 +17,7 @@ const DisplayExpenses = (props) => {
             title={expense.title}
             date={expense.date}
             amount={expense.amount}
+            key={Math.random()}
           />
         ))}
       </Card>
