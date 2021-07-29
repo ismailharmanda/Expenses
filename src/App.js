@@ -13,9 +13,12 @@ function App() {
       amount: 710.2,
     },
   ];
+  const addExpenseHandler = (enteredExpense) => {
+    console.log(enteredExpense);
+  };
   return (
     <div>
-      <NewExpense />
+      <NewExpense addExpense={addExpenseHandler} />
       <DisplayExpenses expenses={expenses} />
     </div>
   );
