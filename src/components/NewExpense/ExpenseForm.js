@@ -33,6 +33,11 @@ const ExpenseForm = () => {
       ...userInput,
     };
     console.log(expenseData);
+    setUserInput({
+      enteredTitle: "",
+      enteredAmount: "",
+      enteredDate: "",
+    });
   };
   return (
     <div>
