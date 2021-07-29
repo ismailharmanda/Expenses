@@ -13,12 +13,12 @@ function App() {
       amount: 710.2,
     },
   ];
-  const addExpenseHandler = (enteredExpense) => {
+  const onAddExpenseHandler = (enteredExpense) => {
     console.log(enteredExpense);
   };
   return (
     <div>
-      <NewExpense addExpense={addExpenseHandler} />
+      <NewExpense onAddExpense={onAddExpenseHandler} />
       <DisplayExpenses expenses={expenses} />
     </div>
   );
