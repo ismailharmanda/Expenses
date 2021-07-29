@@ -13,13 +13,19 @@ const ExpenseForm = () => {
   const { enteredTitle, enteredAmount, enteredDate } = userInput;
 
   const onTitleChange = (e) => {
-    setUserInput({ ...userInput, enteredTitle: e.target.value });
+    setUserInput((prevState) => {
+      return { ...prevState, enteredTitle: e.target.value };
+    });
   };
   const onAmountChange = (e) => {
-    setUserInput({ ...userInput, enteredAmount: e.target.value });
+    setUserInput((prevState) => {
+      return { ...prevState, enteredAmount: e.target.value };
+    });
   };
   const onDateChange = (e) => {
-    setUserInput({ ...userInput, enteredDate: e.target.value });
+    setUserInput((prevState) => {
+      return { ...prevState, enteredDate: e.target.value };
+    });
   };
   return (
     <div>
