@@ -1,4 +1,5 @@
 import React from "react";
+import NewExpense from "./NewExpense";
 import "./NewExpense.css";
 
 const NewExpense = () => {
