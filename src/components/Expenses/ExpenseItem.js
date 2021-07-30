@@ -11,7 +11,14 @@ const ExpenseItem = (props) => {
         <div className="expense-item__description">
           <h2>{props.title}</h2>
           <div className="expense-item__price">${props.amount}</div>
-          <button onClick={() => props.remove(ref.current.id)}></button>
+          <span onClick={() => props.remove(ref.current.id)}>
+            <a href="/#">
+              <i
+                style={{ color: "#8b0000" }}
+                className="fas fa-times-circle"
+              ></i>
+            </a>
+          </span>
         </div>
       </Card>
     </li>
