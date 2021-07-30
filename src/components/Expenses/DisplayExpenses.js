@@ -12,12 +12,15 @@ const DisplayExpenses = (props) => {
   const filteredExpenses = props.expenses.filter((expense) =>
     expense.date.toString().includes(filteredYear)
   );
+  const deleted = (id) => {
+    props.deleteItem(id);
+  };
   return (
     <div>
       <Card className="display-expenses">
         <ExpenseFilter selected={filteredYear} onChange={onChangeHandler} />
         <ExpensesChart expenses={filteredExpenses} />
-        <ExpensesList items={filteredExpenses} />
+        <ExpensesList deletedData={deleted} items={filteredExpenses} />
       </Card>
     </div>
   );

@@ -14,7 +14,6 @@ const DUMMY_EXPENSES = [
     amount: 710.2,
   },
 ];
-
 const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
   const onAddExpenseHandler = (enteredExpense) => {
@@ -22,10 +21,16 @@ const App = () => {
       return [...prev, enteredExpense];
     });
   };
+  const deleted = (id) => {
+    setExpenses((prev) => {
+      return [...prev.filter((expense) => expense.title !== id)];
+    });
+    console.log(id);
+  };
   return (
     <div>
       <NewExpense onAddExpense={onAddExpenseHandler} />
-      <DisplayExpenses expenses={expenses} />
+      <DisplayExpenses deleteItem={deleted} expenses={expenses} />
     </div>
   );
 };

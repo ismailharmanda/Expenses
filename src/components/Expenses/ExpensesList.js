@@ -6,6 +6,9 @@ const ExpensesList = (props) => {
   let expensesContent = (
     <p className="expenses-list__fallback">No expenses found.</p>
   );
+  const onRemove = (id) => {
+    props.deletedData(id);
+  };
   if (props.items.length > 0) {
     expensesContent = props.items.map((expense, index) => (
       <ExpenseItem
@@ -13,6 +16,7 @@ const ExpensesList = (props) => {
         date={expense.date}
         amount={expense.amount}
         key={index}
+        remove={onRemove}
       />
     ));
   }
